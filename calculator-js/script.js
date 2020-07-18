@@ -59,6 +59,12 @@ class Calculator {
       default:
         return;
     }
+    //holder variables enable building a string of the entire equation in the updateDisplayEquals method
+    this.currentOperandHolder = this.currentOperand;
+    this.previousOperandHolder = this.previousOperand;
+    this.operationHolder = this.operation;
+    this.computationHolder = computation;
+    //these variables are for normal operation buttons, not equals button
     this.currentOperand = computation;
     this.operation = undefined;
     this.previousOperand = "";
@@ -91,6 +97,12 @@ class Calculator {
     } else {
       this.previousOperandTextElement.innerText = "";
     }
+  }
+
+  updateDisplayEquals() {
+    this.currentOperand = this.computationHolder;
+    this.currentOperandTextElement.innerHTML = "";
+    this.previousOperandTextElement.innerHTML = `${this.previousOperandHolder} ${this.operationHolder} ${this.currentOperandHolder} = ${this.computationHolder}`;
   }
 }
 
@@ -133,7 +145,7 @@ operationButtons.forEach((button) => {
 
 equalsButton.addEventListener("click", (button) => {
   calculator.compute();
-  calculator.updateDisplay();
+  calculator.updateDisplayEquals();
 });
 
 allClearButton.addEventListener("click", (button) => {
