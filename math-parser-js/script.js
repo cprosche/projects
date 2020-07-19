@@ -13,6 +13,6 @@ function parse(e) {
   e.preventDefault();
   let stringToParse = parseInput.value;
   //remove white space
-  //Order of operations: Multiplcation, Division, Addition, Subtraction
+  //Order of operations: parenthases, exponents, Multiplcation, Division, Addition, Subtraction
   parseOutput.innerHTML = stringToParse;
 }
