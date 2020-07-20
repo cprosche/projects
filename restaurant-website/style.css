@@ -1,5 +1,7 @@
+/*import font*/
 @import url("https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap");
 /* Variables */
+/*mixins*/
 /* styling */
 * {
   -webkit-box-sizing: border-box;
@@ -11,12 +13,16 @@
 }
 
 body {
-  background-color: orange;
+  background-color: white;
   width: 100vw;
   /*start header formatting*/
   /*end header formatting*/
   /*start hero formatting*/
   /*end hero formatting*/
+  /*
+  start footer formatting
+  tutorial: https://www.youtube.com/watch?v=KUHrMzN7ey8
+  */
   /*end footer formatting*/
 }
 
@@ -63,21 +69,73 @@ body .hero-image {
   min-height: 70vh;
   background: url(img/hero-background.jpg) no-repeat center;
   background-size: cover;
+  font-family: "Permanent Marker", cursive;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: black;
 }
 
-body .rdm-bar {
-  background-color: red;
-  text-align: center;
-  font-family: "Permanent Marker", cursive;
+body .hero-image h1 {
+  font-size: 4em;
 }
 
-/*
-  start footer formatting
-  tutorial: https://www.youtube.com/watch?v=KUHrMzN7ey8
-  */
-.footer-container {
+body .hero-image p {
+  font-size: 2em;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+body .hero-image button {
   font-family: "Permanent Marker", cursive;
-  height: 30vh;
+  border: 1.5px solid red;
+  background-color: rgba(255, 255, 255, 0.6);
+  padding: 0.5em;
+  text-transform: uppercase;
+  font-weight: bold;
+  border-radius: 7px;
+  width: 150px;
+  margin: 5px;
+}
+
+body .hero-image button:hover {
+  background-color: white;
+}
+
+body .about {
+  font-family: "Permanent Marker", cursive;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 20px;
+}
+
+body .about img {
+  width: 40vw;
+}
+
+body .about .about-text {
+  padding: 30px;
+}
+
+body .footer-container {
+  font-family: "Permanent Marker", cursive;
+  height: 25vh;
   width: 100vw;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -89,5 +147,47 @@ body .rdm-bar {
           align-items: center;
   background-color: white;
   border-top: 2px solid red;
+}
+
+body .footer-container .logo-container {
+  text-align: center;
+}
+
+body .footer-container a {
+  color: black;
+}
+
+body .footer-container a:hover {
+  color: red;
+}
+
+body .footer-container ul {
+  color: blue;
+}
+
+body .footer-container .footer-third-brands li {
+  display: inline-block;
+}
+
+body .rdm-bar {
+  background-color: red;
+  text-align: center;
+  font-family: "Permanent Marker", cursive;
+}
+
+@media screen and (max-width: 600px) {
+  .footer-container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    height: 45vh !important;
+  }
+  .about {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
 }
 /*# sourceMappingURL=style.css.map */

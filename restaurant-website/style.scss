@@ -1,13 +1,30 @@
+/*import font*/
 @import url("https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap");
 
 /* Variables */
 $primary-color: white;
-$secondary-color: orange; //body background
+$primary-color-more-opacity: rgba(255, 255, 255, 0.6);
+$secondary-color: white; //body background
 $accent-color: red; //link highlighting, borders
 $text-color: black;
 
 $header-font: "Permanent Marker", cursive;
 $secondary-font: "Permanent Marker", cursive;
+
+/*mixins*/
+@mixin primaryButton {
+  font-family: $header-font;
+  border: 1.5px solid $accent-color;
+  background-color: $primary-color-more-opacity;
+  padding: 0.5em;
+  text-transform: uppercase;
+  font-weight: bold;
+  border-radius: 7px;
+  width: 150px;
+  &:hover {
+    background-color: $primary-color;
+  }
+}
 
 /* styling */
 * {
@@ -42,9 +59,10 @@ body {
           color: $text-color;
           text-align: center;
           cursor: pointer;
-        }
-        a:hover {
-          color: $accent-color;
+
+          &:hover {
+            color: $accent-color;
+          }
         }
       }
     } /*end navebar link list formatting*/
@@ -55,8 +73,71 @@ body {
     min-height: 70vh;
     background: url(img/hero-background.jpg) no-repeat center; //sets hero background image
     background-size: cover;
+    font-family: $secondary-font;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: $text-color;
+    h1 {
+      font-size: 4em;
+    }
+    p {
+      font-size: 2em;
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+    button {
+      @include primaryButton();
+      margin: 5px;
+    }
   }
   /*end hero formatting*/
+
+  .about {
+    font-family: $secondary-font;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 20px;
+    img {
+      width: 40vw;
+    }
+    .about-text {
+      padding: 30px;
+    }
+  }
+
+  /*
+  start footer formatting
+  tutorial: https://www.youtube.com/watch?v=KUHrMzN7ey8
+  */
+  .footer-container {
+    font-family: $header-font;
+    height: 25vh;
+    width: 100vw;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    background-color: $primary-color;
+    border-top: 2px solid $accent-color;
+    .logo-container {
+      text-align: center;
+    }
+    a {
+      color: $text-color;
+    }
+    a:hover {
+      color: $accent-color;
+    }
+    ul {
+      color: blue;
+    }
+    .footer-third-brands li {
+      display: inline-block;
+    }
+  }
 
   /*end footer formatting*/
   .rdm-bar {
@@ -65,18 +146,12 @@ body {
     font-family: $header-font;
   }
 }
-
-/*
-  start footer formatting
-  tutorial: https://www.youtube.com/watch?v=KUHrMzN7ey8
-  */
-.footer-container {
-  font-family: $header-font;
-  height: 30vh;
-  width: 100vw;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  background-color: $primary-color;
-  border-top: 2px solid $accent-color;
+@media screen and (max-width: 600px) {
+  .footer-container {
+    flex-direction: column;
+    height: 45vh !important;
+  }
+  .about {
+    flex-direction: column;
+  }
 }
