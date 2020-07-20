@@ -26,6 +26,18 @@ $secondary-font: "Permanent Marker", cursive;
   }
 }
 
+@mixin imageHover($text) {
+  font-family: $secondary-font;
+  padding-top: 10px;
+  padding-left: 20px;
+  font-size: 2em;
+  color: $text-color;
+
+  &:hover::after {
+    content: $text;
+  }
+}
+
 /* styling */
 * {
   box-sizing: border-box;
@@ -94,6 +106,7 @@ body {
   }
   /*end hero formatting*/
 
+  /*start about formatting*/
   .about {
     font-family: $secondary-font;
     display: flex;
@@ -107,6 +120,70 @@ body {
       padding: 30px;
     }
   }
+  /*end about formatting*/
+
+  /*start gallery formatting*/
+  .gallery {
+    .top-section {
+      display: flex;
+      width: 100vw;
+      height: 50vh;
+      .top-left {
+        background: url(img/gallery/food1.jpg) no-repeat center;
+        background-size: cover;
+        width: 60%;
+
+        @include imageHover("BBQ Pizza");
+      }
+
+      .top-right {
+        width: 40%;
+        .top-above {
+          background: url(img/gallery/food2.jpg) no-repeat center;
+          background-size: cover;
+          width: 100%;
+          height: 50%;
+          @include imageHover("Pepperoni Pizza");
+        }
+        .top-below {
+          background: url(img/gallery/food3.jpg) no-repeat center;
+          background-size: cover;
+          width: 100%;
+          height: 50%;
+          @include imageHover("Artichoke Pizza");
+        }
+      }
+    }
+    .bottom-section {
+      display: flex;
+      width: 100vw;
+      height: 50vh;
+      .bottom-left {
+        width: 40%;
+        .bottom-above {
+          background: url(img/gallery/food4.jpg) no-repeat center;
+          background-size: cover;
+          width: 100%;
+          height: 50%;
+          @include imageHover("Breakfast Pizza");
+        }
+        .bottom-below {
+          background: url(img/gallery/food5.jpg) no-repeat center;
+          background-size: cover;
+          width: 100%;
+          height: 50%;
+          @include imageHover("Cheese Pizza");
+        }
+      }
+      .bottom-right {
+        background: url(img/gallery/food6.jpg) no-repeat center;
+        background-size: cover;
+        width: 60%;
+        @include imageHover("Margarhita Pizza");
+      }
+    }
+  }
+  /*end gallery formatting*/
 
   /*
   start footer formatting
@@ -144,6 +221,13 @@ body {
     background-color: $accent-color;
     text-align: center;
     font-family: $header-font;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    img {
+      height: 7vh;
+    }
   }
 }
 @media screen and (max-width: 600px) {

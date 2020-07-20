@@ -19,6 +19,10 @@ body {
   /*end header formatting*/
   /*start hero formatting*/
   /*end hero formatting*/
+  /*start about formatting*/
+  /*end about formatting*/
+  /*start gallery formatting*/
+  /*end gallery formatting*/
   /*
   start footer formatting
   tutorial: https://www.youtube.com/watch?v=KUHrMzN7ey8
@@ -133,6 +137,124 @@ body .about .about-text {
   padding: 30px;
 }
 
+body .gallery .top-section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100vw;
+  height: 50vh;
+}
+
+body .gallery .top-section .top-left {
+  background: url(img/gallery/food1.jpg) no-repeat center;
+  background-size: cover;
+  width: 60%;
+  font-family: "Permanent Marker", cursive;
+  padding-top: 10px;
+  padding-left: 20px;
+  font-size: 2em;
+  color: black;
+}
+
+body .gallery .top-section .top-left:hover::after {
+  content: "BBQ Pizza";
+}
+
+body .gallery .top-section .top-right {
+  width: 40%;
+}
+
+body .gallery .top-section .top-right .top-above {
+  background: url(img/gallery/food2.jpg) no-repeat center;
+  background-size: cover;
+  width: 100%;
+  height: 50%;
+  font-family: "Permanent Marker", cursive;
+  padding-top: 10px;
+  padding-left: 20px;
+  font-size: 2em;
+  color: black;
+}
+
+body .gallery .top-section .top-right .top-above:hover::after {
+  content: "Pepperoni Pizza";
+}
+
+body .gallery .top-section .top-right .top-below {
+  background: url(img/gallery/food3.jpg) no-repeat center;
+  background-size: cover;
+  width: 100%;
+  height: 50%;
+  font-family: "Permanent Marker", cursive;
+  padding-top: 10px;
+  padding-left: 20px;
+  font-size: 2em;
+  color: black;
+}
+
+body .gallery .top-section .top-right .top-below:hover::after {
+  content: "Artichoke Pizza";
+}
+
+body .gallery .bottom-section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100vw;
+  height: 50vh;
+}
+
+body .gallery .bottom-section .bottom-left {
+  width: 40%;
+}
+
+body .gallery .bottom-section .bottom-left .bottom-above {
+  background: url(img/gallery/food4.jpg) no-repeat center;
+  background-size: cover;
+  width: 100%;
+  height: 50%;
+  font-family: "Permanent Marker", cursive;
+  padding-top: 10px;
+  padding-left: 20px;
+  font-size: 2em;
+  color: black;
+}
+
+body .gallery .bottom-section .bottom-left .bottom-above:hover::after {
+  content: "Breakfast Pizza";
+}
+
+body .gallery .bottom-section .bottom-left .bottom-below {
+  background: url(img/gallery/food5.jpg) no-repeat center;
+  background-size: cover;
+  width: 100%;
+  height: 50%;
+  font-family: "Permanent Marker", cursive;
+  padding-top: 10px;
+  padding-left: 20px;
+  font-size: 2em;
+  color: black;
+}
+
+body .gallery .bottom-section .bottom-left .bottom-below:hover::after {
+  content: "Cheese Pizza";
+}
+
+body .gallery .bottom-section .bottom-right {
+  background: url(img/gallery/food6.jpg) no-repeat center;
+  background-size: cover;
+  width: 60%;
+  font-family: "Permanent Marker", cursive;
+  padding-top: 10px;
+  padding-left: 20px;
+  font-size: 2em;
+  color: black;
+}
+
+body .gallery .bottom-section .bottom-right:hover::after {
+  content: "Margarhita Pizza";
+}
+
 body .footer-container {
   font-family: "Permanent Marker", cursive;
   height: 25vh;
@@ -173,6 +295,20 @@ body .rdm-bar {
   background-color: red;
   text-align: center;
   font-family: "Permanent Marker", cursive;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 5px;
+}
+
+body .rdm-bar img {
+  height: 7vh;
 }
 
 @media screen and (max-width: 600px) {
