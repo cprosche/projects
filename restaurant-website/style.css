@@ -6,10 +6,18 @@
           box-sizing: border-box;
   margin: 0;
   padding: 0;
+  list-style: none;
+  text-decoration: none;
 }
 
 body {
   background-color: orange;
+  width: 100vw;
+  /*start header formatting*/
+  /*end header formatting*/
+  /*start hero formatting*/
+  /*end hero formatting*/
+  /*end footer formatting*/
 }
 
 body header {
@@ -26,6 +34,7 @@ body header {
   padding: 12px 10%;
   border-bottom: 2px solid red;
   font-family: "Permanent Marker", cursive;
+  overflow: hidden;
   /*start navbar link list formatting*/
   /*end navebar link list formatting*/
 }
@@ -48,5 +57,37 @@ body header ul li a {
 
 body header ul li a:hover {
   color: red;
+}
+
+body .hero-image {
+  min-height: 70vh;
+  background: url(img/hero-background.jpg) no-repeat center;
+  background-size: cover;
+}
+
+body .rdm-bar {
+  background-color: red;
+  text-align: center;
+  font-family: "Permanent Marker", cursive;
+}
+
+/*
+  start footer formatting
+  tutorial: https://www.youtube.com/watch?v=KUHrMzN7ey8
+  */
+.footer-container {
+  font-family: "Permanent Marker", cursive;
+  height: 30vh;
+  width: 100vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: white;
+  border-top: 2px solid red;
 }
 /*# sourceMappingURL=style.css.map */
