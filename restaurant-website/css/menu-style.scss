@@ -1,4 +1,3 @@
-/*import font*/
 @import url("https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Carter+One");
 
@@ -90,142 +89,47 @@ body {
     }
   } /*end header formatting*/
 
-  /*start hero formatting*/
-  .hero-image {
-    min-height: 70vh;
-    background: url(img/hero-background.jpg) no-repeat center; //sets hero background image
-    background-size: cover;
-    font-family: $header-font;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    color: $text-color;
-    text-align: center;
+  /*start menu formatting*/
+  .menu {
     h1 {
-      font-size: 4em;
-    }
-    p {
-      font-size: 2em;
-      padding-left: 10px;
-      padding-right: 10px;
-      font-family: $secondary-font;
-    }
-    button {
-      @include primaryButton();
-      margin: 5px;
-    }
-  }
-  /*end hero formatting*/
-
-  /*start hours formatting*/
-  .info-section {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 5em;
-    justify-content: space-around;
-    align-items: top;
-    text-align: center;
-    padding: 2em;
-    white-space: nowrap;
-    h2 {
       font-family: $header-font;
-      border-bottom: 2px solid $accent-color;
       font-size: 3em;
+      text-align: center;
+      margin-top: 0.5em;
     }
-    ul {
-      font-family: $secondary-font;
-      font-size: 1.5em;
-    }
-  }
-  /*end hours formatting*/
-
-  /*start about formatting*/
-  .about {
-    font-family: $secondary-font;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    margin: 20px;
-    h2 {
-      font-family: $header-font;
-    }
-    img {
-      width: 40vw;
-    }
-    .about-text {
-      padding: 30px;
-    }
-  }
-  /*end about formatting*/
-
-  /*start gallery formatting*/
-  .gallery {
-    .top-section {
-      display: flex;
-      width: 100vw;
-      height: 50vh;
-      .top-left {
-        background: url(img/gallery/food1.jpg) no-repeat center;
-        background-size: cover;
-        width: 60%;
-
-        @include imageHover("BBQ Pizza");
-      }
-
-      .top-right {
-        width: 40%;
-        .top-above {
-          background: url(img/gallery/food2.jpg) no-repeat center;
-          background-size: cover;
-          width: 100%;
-          height: 50%;
-          @include imageHover("Pepperoni Pizza");
+    .menu-section {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      .menu-header {
+        grid-column: 1/-1;
+        padding: 1em;
+        h2 {
+          font-family: $header-font;
+          font-size: 2em;
         }
-        .top-below {
-          background: url(img/gallery/food3.jpg) no-repeat center;
-          background-size: cover;
-          width: 100%;
-          height: 50%;
-          @include imageHover("Artichoke Pizza");
+        p {
+          font-family: $secondary-font;
+          font-size: 0.9em;
         }
       }
-    }
-    .bottom-section {
-      display: flex;
-      width: 100vw;
-      height: 50vh;
-      .bottom-left {
-        width: 40%;
-        .bottom-above {
-          background: url(img/gallery/food4.jpg) no-repeat center;
-          background-size: cover;
-          width: 100%;
-          height: 50%;
-          @include imageHover("Breakfast Pizza");
+
+      .menu-item {
+        padding: 1em 2em;
+        h3 {
+          font-family: $header-font;
         }
-        .bottom-below {
-          background: url(img/gallery/food5.jpg) no-repeat center;
-          background-size: cover;
-          width: 100%;
-          height: 50%;
-          @include imageHover("Cheese Pizza");
+        p {
+          font-family: $secondary-font;
         }
-      }
-      .bottom-right {
-        background: url(img/gallery/food6.jpg) no-repeat center;
-        background-size: cover;
-        width: 60%;
-        @include imageHover("Margarhita Pizza");
       }
     }
   }
-  /*end gallery formatting*/
+  /*end menu formatting*/
 
-  /*
-  start footer formatting
-  tutorial: https://www.youtube.com/watch?v=KUHrMzN7ey8
-  */
+  /*start footer formatting*/
   .footer-container {
     font-family: $secondary-font;
     height: 20vh;

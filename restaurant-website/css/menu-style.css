@@ -1,0 +1,236 @@
+@import url("https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Carter+One");
+/* Variables */
+/*mixins*/
+/* styling */
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+}
+
+body {
+  background-color: white;
+  width: 100vw;
+  /*start header formatting*/
+  /*end header formatting*/
+  /*start menu formatting*/
+  /*end menu formatting*/
+  /*start footer formatting*/
+  /*end footer formatting*/
+}
+
+body header {
+  background-color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 12px 10%;
+  border-bottom: 2px solid red;
+  font-family: "Permanent Marker", cursive;
+  overflow: hidden;
+  /*start navbar link list formatting*/
+  /*end navebar link list formatting*/
+}
+
+body header ul {
+  list-style: none;
+}
+
+body header ul li {
+  display: inline-block;
+  padding: 0px 1.5vw;
+}
+
+body header ul li a {
+  text-decoration: none;
+  color: black;
+  text-align: center;
+  cursor: pointer;
+  font-family: "Carter One", cursive;
+}
+
+body header ul li a:hover {
+  color: red;
+}
+
+body header button {
+  font-family: "Carter One", cursive;
+  border: 1.5px solid red;
+  background-color: rgba(255, 255, 255, 0.6);
+  padding: 0.5em;
+  text-transform: uppercase;
+  font-weight: bold;
+  border-radius: 7px;
+  width: 150px;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+body header button:hover {
+  background-color: white;
+}
+
+body header button:hover {
+  background-color: red;
+}
+
+body .menu h1 {
+  font-family: "Permanent Marker", cursive;
+  font-size: 3em;
+  text-align: center;
+  margin-top: 0.5em;
+}
+
+body .menu .menu-section {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+}
+
+body .menu .menu-section .menu-header {
+  grid-column: 1/-1;
+  padding: 1em;
+}
+
+body .menu .menu-section .menu-header h2 {
+  font-family: "Permanent Marker", cursive;
+  font-size: 2em;
+}
+
+body .menu .menu-section .menu-header p {
+  font-family: "Carter One", cursive;
+  font-size: 0.9em;
+}
+
+body .menu .menu-section .menu-item {
+  padding: 1em 2em;
+}
+
+body .menu .menu-section .menu-item h3 {
+  font-family: "Permanent Marker", cursive;
+}
+
+body .menu .menu-section .menu-item p {
+  font-family: "Carter One", cursive;
+}
+
+body .footer-container {
+  font-family: "Carter One", cursive;
+  height: 20vh;
+  width: 100vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: white;
+  border-top: 2px solid red;
+}
+
+body .footer-container h2 {
+  font-family: "Permanent Marker", cursive;
+}
+
+body .footer-container .logo-container {
+  text-align: center;
+}
+
+body .footer-container a {
+  color: black;
+}
+
+body .footer-container a:hover {
+  color: red;
+}
+
+body .footer-container .footer-third-brands li {
+  display: inline-block;
+}
+
+body .copyright {
+  font-family: "Carter One", cursive;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 3px;
+}
+
+body .rdm-bar {
+  background-color: red;
+  text-align: center;
+  font-family: "Carter One", cursive;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 5px;
+}
+
+body .rdm-bar img {
+  height: 7vh;
+  margin-top: 10px;
+}
+
+@media screen and (max-width: 600px) {
+  .footer-container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    height: 45vh !important;
+  }
+  .about {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    text-align: center;
+  }
+  .about img {
+    width: 90vw !important;
+  }
+  .info-section {
+    -ms-grid-columns: (1fr)[1] !important;
+        grid-template-columns: repeat(1, 1fr) !important;
+  }
+}
+/*# sourceMappingURL=menu-style.css.map */

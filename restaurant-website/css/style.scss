@@ -1,0 +1,294 @@
+/*import font*/
+@import url("https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Carter+One");
+
+/* Variables */
+$primary-color: white;
+$primary-color-more-opacity: rgba(255, 255, 255, 0.6);
+$secondary-color: white; //body background
+$accent-color: red; //link highlighting, borders
+$text-color: black;
+
+$header-font: "Permanent Marker", cursive;
+$secondary-font: "Carter One", cursive;
+
+/*mixins*/
+@mixin primaryButton {
+  font-family: $secondary-font;
+  border: 1.5px solid $accent-color;
+  background-color: $primary-color-more-opacity;
+  padding: 0.5em;
+  text-transform: uppercase;
+  font-weight: bold;
+  border-radius: 7px;
+  width: 150px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-evenly;
+  &:hover {
+    background-color: $primary-color;
+  }
+}
+
+@mixin imageHover($text) {
+  font-family: $header-font;
+  padding-top: 10px;
+  padding-left: 20px;
+  font-size: 2em;
+  color: $text-color;
+
+  &:hover::after {
+    content: $text;
+  }
+}
+
+/* styling */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+}
+
+body {
+  background-color: $secondary-color;
+  width: 100vw;
+  /*start header formatting*/
+  header {
+    background-color: $primary-color;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 10%;
+    border-bottom: 2px solid $accent-color;
+    font-family: $header-font;
+    overflow: hidden;
+    /*start navbar link list formatting*/
+    ul {
+      list-style: none;
+      li {
+        display: inline-block;
+        padding: 0px 1.5vw;
+        a {
+          text-decoration: none;
+          color: $text-color;
+          text-align: center;
+          cursor: pointer;
+          font-family: $secondary-font;
+          &:hover {
+            color: $accent-color;
+          }
+        }
+      }
+    } /*end navebar link list formatting*/
+    button {
+      @include primaryButton();
+      &:hover {
+        background-color: $accent-color;
+      }
+    }
+  } /*end header formatting*/
+
+  /*start hero formatting*/
+  .hero-image {
+    min-height: 70vh;
+    background: url(../img/hero-background.jpg) no-repeat center; //sets hero background image
+    background-size: cover;
+    font-family: $header-font;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: $text-color;
+    text-align: center;
+    h1 {
+      font-size: 4em;
+    }
+    p {
+      font-size: 2em;
+      padding-left: 10px;
+      padding-right: 10px;
+      font-family: $secondary-font;
+    }
+    button {
+      @include primaryButton();
+      margin: 5px;
+    }
+  }
+  /*end hero formatting*/
+
+  /*start hours formatting*/
+  .info-section {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5em;
+    justify-content: space-around;
+    align-items: top;
+    text-align: center;
+    padding: 2em;
+    white-space: nowrap;
+    h2 {
+      font-family: $header-font;
+      border-bottom: 2px solid $accent-color;
+      font-size: 3em;
+    }
+    ul {
+      font-family: $secondary-font;
+      font-size: 1.5em;
+    }
+  }
+  /*end hours formatting*/
+
+  /*start about formatting*/
+  .about {
+    font-family: $secondary-font;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 20px;
+    h2 {
+      font-family: $header-font;
+    }
+    img {
+      width: 40vw;
+    }
+    .about-text {
+      padding: 30px;
+    }
+  }
+  /*end about formatting*/
+
+  /*start gallery formatting*/
+  .gallery {
+    .top-section {
+      display: flex;
+      width: 100vw;
+      height: 50vh;
+      .top-left {
+        background: url(../img/gallery/food1.jpg) no-repeat center;
+        background-size: cover;
+        width: 60%;
+
+        @include imageHover("BBQ Pizza");
+      }
+
+      .top-right {
+        width: 40%;
+        .top-above {
+          background: url(../img/gallery/food2.jpg) no-repeat center;
+          background-size: cover;
+          width: 100%;
+          height: 50%;
+          @include imageHover("Pepperoni Pizza");
+        }
+        .top-below {
+          background: url(../img/gallery/food3.jpg) no-repeat center;
+          background-size: cover;
+          width: 100%;
+          height: 50%;
+          @include imageHover("Artichoke Pizza");
+        }
+      }
+    }
+    .bottom-section {
+      display: flex;
+      width: 100vw;
+      height: 50vh;
+      .bottom-left {
+        width: 40%;
+        .bottom-above {
+          background: url(../img/gallery/food4.jpg) no-repeat center;
+          background-size: cover;
+          width: 100%;
+          height: 50%;
+          @include imageHover("Breakfast Pizza");
+        }
+        .bottom-below {
+          background: url(../img/gallery/food5.jpg) no-repeat center;
+          background-size: cover;
+          width: 100%;
+          height: 50%;
+          @include imageHover("Cheese Pizza");
+        }
+      }
+      .bottom-right {
+        background: url(../img/gallery/food6.jpg) no-repeat center;
+        background-size: cover;
+        width: 60%;
+        @include imageHover("Margarhita Pizza");
+      }
+    }
+  }
+  /*end gallery formatting*/
+
+  /*
+  start footer formatting
+  tutorial: https://www.youtube.com/watch?v=KUHrMzN7ey8
+  */
+  .footer-container {
+    font-family: $secondary-font;
+    height: 20vh;
+    width: 100vw;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    background-color: $primary-color;
+    border-top: 2px solid $accent-color;
+    h2 {
+      font-family: $header-font;
+    }
+    .logo-container {
+      text-align: center;
+    }
+    a {
+      color: $text-color;
+    }
+    a:hover {
+      color: $accent-color;
+    }
+
+    .footer-third-brands li {
+      display: inline-block;
+    }
+  }
+  .copyright {
+    font-family: $secondary-font;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 3px;
+  }
+
+  /*end footer formatting*/
+  .rdm-bar {
+    background-color: $accent-color;
+    text-align: center;
+    font-family: $secondary-font;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    img {
+      height: 7vh;
+      margin-top: 10px;
+    }
+  }
+}
+@media screen and (max-width: 600px) {
+  .footer-container {
+    flex-direction: column;
+    height: 45vh !important;
+  }
+  .about {
+    flex-direction: column;
+    text-align: center;
+    img {
+      width: 90vw !important;
+    }
+  }
+  .info-section {
+    grid-template-columns: repeat(1, 1fr) !important;
+  }
+}
