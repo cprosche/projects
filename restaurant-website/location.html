@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--external links-->
+    <link rel="stylesheet" href="css/location-style.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/js/all.min.js"></script>
+
+    <link rel="icon" href="img/pizza-icon.PNG" />
+    <title>Location | Gen's Pizza</title>
+  </head>
+  <body>
+    <!--start header-->
+    <header>
+      <h2>Gen's Pizza</h2>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="location.html">Location</a></li>
+        </ul>
+      </nav>
+      <a href="tel:8157421496">
+        <button><i class="fas fa-phone fa-2x"></i> (815) 742-1496</button>
+      </a>
+    </header>
+    <!--end header-->
+
+    <!--start page body-->
+    <div class="body-container">
+      <div class="storefront-image"></div>
+      <div class="location-info">
+        <h2>Location</h2>
+        <ul>
+          <li><a href="tel:8157421496">Phone: (815) 742-1496</a></li>
+          <li>123 Main Street</li>
+          <li>Puxatomy WY 12345</li>
+        </ul>
+        <p>
+          We've been at our 123 Main location for a long time. Lorem ipsum dolor
+          sit amet consectetur adipisicing elit. Beatae at necessitatibus iste
+          neque, molestias qui reprehenderit modi fugit cum ratione assumenda
+          fuga expedita distinctio aspernatur unde, enim numquam aliquid
+          excepturi aut tenetur harum, dolores voluptate. Iure voluptates
+          praesentium cupiditate itaque!
+        </p>
+      </div>
+      <div class="kitchen-info">
+        <img src="img/kitchen.jpg" alt="restaurant storefront" />
+
+        <div class="kitchen-description">
+          <h2>Our Oven</h2>
+          <p>
+            Our woodfire oven was hand built. Lorem ipsum, dolor sit amet
+            consectetur adipisicing elit. Quae nisi voluptate magnam
+            dignissimos! Porro cupiditate soluta unde magni maiores quibusdam
+            quis quas excepturi similique praesentium minus odit fugiat sed
+            blanditiis, nemo harum eligendi dignissimos debitis vitae,
+            aspernatur tenetur, perspiciatis alias?
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--end page body-->
+
+    <!--start footer-->
+    <div class="footer-container">
+      <div class="logo-container">
+        <h2>Gen's Pizza</h2>
+      </div>
+
+      <div class="footer-third">
+        <h2>Navigation</h2>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="location.html">Location</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-third">
+        <h2>Info</h2>
+        <ul>
+          <li><a href="tel:8157421496">Phone: (815) 742-1496</a></li>
+          <li>123 Main Street</li>
+          <li>Puxatomy WY 12345</li>
+        </ul>
+      </div>
+
+      <div class="footer-third-brands">
+        <h2>Follow Us</h2>
+        <ul>
+          <li>
+            <a href="#"><i class="fab fa-facebook-square fa-2x"></i></a>
+          </li>
+          <li>
+            <a href="#"><i class="fab fa-twitter-square fa-2x"></i></a>
+          </li>
+          <li>
+            <a href="#"><i class="fab fa-instagram-square fa-2x"></i></a>
+          </li>
+          <li>
+            <a href="#"><i class="fab fa-linkedin fa-2x"></i></a>
+          </li>
+          <li>
+            <a href="#"><i class="fab fa-snapchat-square fa-2x"></i></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="copyright">
+      <p>Copyright &copy; <span id="year"></span> RDM</p>
+    </div>
+    <div class="rdm-bar">
+      <p>Website built by:</p>
+      <a href="https://roschedigitalmarketing.com"
+        ><img src="img/RDM Logo-03.svg" alt="RDM Logo"
+      /></a>
+    </div>
+    <!--end footer-->
+    <!--add copyright-->
+
+    <script>
+      //inserts the year into any tag with "year" id
+      var d = new Date();
+      document.getElementById("year").innerHTML = d.getFullYear();
+    </script>
+  </body>
+</html>

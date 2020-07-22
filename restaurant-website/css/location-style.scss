@@ -1,0 +1,204 @@
+@import url("https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Carter+One");
+
+/* Variables */
+$primary-color: white;
+$primary-color-more-opacity: rgba(255, 255, 255, 0.6);
+$secondary-color: white; //body background
+$accent-color: red; //link highlighting, borders
+$text-color: black;
+
+$header-font: "Permanent Marker", cursive;
+$secondary-font: "Carter One", cursive;
+
+/*mixins*/
+@mixin primaryButton {
+  font-family: $secondary-font;
+  border: 1.5px solid $accent-color;
+  background-color: $primary-color-more-opacity;
+  padding: 0.5em;
+  text-transform: uppercase;
+  font-weight: bold;
+  border-radius: 7px;
+  width: 150px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-evenly;
+  &:hover {
+    background-color: $primary-color;
+  }
+}
+
+@mixin imageHover($text) {
+  font-family: $header-font;
+  padding-top: 10px;
+  padding-left: 20px;
+  font-size: 2em;
+  color: $text-color;
+
+  &:hover::after {
+    content: $text;
+  }
+}
+
+/* styling */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+}
+
+body {
+  background-color: $secondary-color;
+  width: 100vw;
+  /*start header formatting*/
+  header {
+    background-color: $primary-color;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 10%;
+    border-bottom: 2px solid $accent-color;
+    font-family: $header-font;
+    overflow: hidden;
+    /*start navbar link list formatting*/
+    ul {
+      list-style: none;
+      li {
+        display: inline-block;
+        padding: 0px 1.5vw;
+        a {
+          text-decoration: none;
+          color: $text-color;
+          text-align: center;
+          cursor: pointer;
+          font-family: $secondary-font;
+          &:hover {
+            color: $accent-color;
+          }
+        }
+      }
+    } /*end navebar link list formatting*/
+    button {
+      @include primaryButton();
+      &:hover {
+        background-color: $accent-color;
+      }
+    }
+  } /*end header formatting*/
+
+  /*start location formatting*/
+  .storefront-image {
+    min-height: 40vh;
+    background: url(../img/storefront.jpg) no-repeat center; //sets storefront background image
+    background-size: cover;
+  }
+  .location-info {
+    font-family: $secondary-font;
+    text-align: center;
+    margin: 1.5em 3em;
+    h2 {
+      font-family: $header-font;
+    }
+    a {
+      color: $text-color;
+    }
+  }
+  .kitchen-info {
+    font-family: $secondary-font;
+    margin: 3em 3em;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+    align-items: center;
+    gap: 2em;
+    img {
+      justify-self: right;
+      max-width: 45vw;
+    }
+    h2 {
+      font-family: $header-font;
+    }
+  }
+  /*end location formatting*/
+
+  /*start footer formatting*/
+  .footer-container {
+    font-family: $secondary-font;
+    height: 20vh;
+    width: 100vw;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    background-color: $primary-color;
+    border-top: 2px solid $accent-color;
+    h2 {
+      font-family: $header-font;
+    }
+    .logo-container {
+      text-align: center;
+    }
+    a {
+      color: $text-color;
+    }
+    a:hover {
+      color: $accent-color;
+    }
+
+    .footer-third-brands li {
+      display: inline-block;
+    }
+  }
+  .copyright {
+    font-family: $secondary-font;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 3px;
+  }
+
+  /*end footer formatting*/
+  .rdm-bar {
+    background-color: $accent-color;
+    text-align: center;
+    font-family: $secondary-font;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    img {
+      height: 7vh;
+      margin-top: 10px;
+    }
+  }
+}
+@media screen and (max-width: 600px) {
+  .footer-container {
+    flex-direction: column;
+    height: 45vh !important;
+  }
+  .about {
+    flex-direction: column;
+    text-align: center;
+    img {
+      width: 90vw !important;
+    }
+  }
+  .kitchen-info {
+    grid-template-columns: repeat(1, 1fr) !important;
+    grid: 0 !important;
+    justify-content: center !important;
+    align-items: center !important;
+    text-align: center;
+    img {
+      max-width: 90vw !important;
+
+      text-align: center;
+      margin: 0;
+      padding: 0;
+    }
+  }
+}

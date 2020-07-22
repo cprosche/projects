@@ -1,0 +1,248 @@
+@import url("https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Carter+One");
+/* Variables */
+/*mixins*/
+/* styling */
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+}
+
+body {
+  background-color: white;
+  width: 100vw;
+  /*start header formatting*/
+  /*end header formatting*/
+  /*start location formatting*/
+  /*end location formatting*/
+  /*start footer formatting*/
+  /*end footer formatting*/
+}
+
+body header {
+  background-color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 12px 10%;
+  border-bottom: 2px solid red;
+  font-family: "Permanent Marker", cursive;
+  overflow: hidden;
+  /*start navbar link list formatting*/
+  /*end navebar link list formatting*/
+}
+
+body header ul {
+  list-style: none;
+}
+
+body header ul li {
+  display: inline-block;
+  padding: 0px 1.5vw;
+}
+
+body header ul li a {
+  text-decoration: none;
+  color: black;
+  text-align: center;
+  cursor: pointer;
+  font-family: "Carter One", cursive;
+}
+
+body header ul li a:hover {
+  color: red;
+}
+
+body header button {
+  font-family: "Carter One", cursive;
+  border: 1.5px solid red;
+  background-color: rgba(255, 255, 255, 0.6);
+  padding: 0.5em;
+  text-transform: uppercase;
+  font-weight: bold;
+  border-radius: 7px;
+  width: 150px;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+body header button:hover {
+  background-color: white;
+}
+
+body header button:hover {
+  background-color: red;
+}
+
+body .storefront-image {
+  min-height: 40vh;
+  background: url(../img/storefront.jpg) no-repeat center;
+  background-size: cover;
+}
+
+body .location-info {
+  font-family: "Carter One", cursive;
+  text-align: center;
+  margin: 1.5em 3em;
+}
+
+body .location-info h2 {
+  font-family: "Permanent Marker", cursive;
+}
+
+body .location-info a {
+  color: black;
+}
+
+body .kitchen-info {
+  font-family: "Carter One", cursive;
+  margin: 3em 3em;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 2em;
+}
+
+body .kitchen-info img {
+  -ms-grid-column-align: right;
+      justify-self: right;
+  max-width: 45vw;
+}
+
+body .kitchen-info h2 {
+  font-family: "Permanent Marker", cursive;
+}
+
+body .footer-container {
+  font-family: "Carter One", cursive;
+  height: 20vh;
+  width: 100vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: white;
+  border-top: 2px solid red;
+}
+
+body .footer-container h2 {
+  font-family: "Permanent Marker", cursive;
+}
+
+body .footer-container .logo-container {
+  text-align: center;
+}
+
+body .footer-container a {
+  color: black;
+}
+
+body .footer-container a:hover {
+  color: red;
+}
+
+body .footer-container .footer-third-brands li {
+  display: inline-block;
+}
+
+body .copyright {
+  font-family: "Carter One", cursive;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 3px;
+}
+
+body .rdm-bar {
+  background-color: red;
+  text-align: center;
+  font-family: "Carter One", cursive;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 5px;
+}
+
+body .rdm-bar img {
+  height: 7vh;
+  margin-top: 10px;
+}
+
+@media screen and (max-width: 600px) {
+  .footer-container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    height: 45vh !important;
+  }
+  .about {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    text-align: center;
+  }
+  .about img {
+    width: 90vw !important;
+  }
+  .kitchen-info {
+    -ms-grid-columns: (1fr)[1] !important;
+        grid-template-columns: repeat(1, 1fr) !important;
+    grid: 0 !important;
+    -webkit-box-pack: center !important;
+        -ms-flex-pack: center !important;
+            justify-content: center !important;
+    -webkit-box-align: center !important;
+        -ms-flex-align: center !important;
+            align-items: center !important;
+    text-align: center;
+  }
+  .kitchen-info img {
+    max-width: 90vw !important;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+  }
+}
+/*# sourceMappingURL=location-style.css.map */
