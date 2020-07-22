@@ -1,5 +1,6 @@
 /*import font*/
 @import url("https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Carter+One");
 /* Variables */
 /*mixins*/
 /* styling */
@@ -19,6 +20,8 @@ body {
   /*end header formatting*/
   /*start hero formatting*/
   /*end hero formatting*/
+  /*start hours formatting*/
+  /*end hours formatting*/
   /*start about formatting*/
   /*end about formatting*/
   /*start gallery formatting*/
@@ -63,10 +66,39 @@ body header ul li a {
   color: black;
   text-align: center;
   cursor: pointer;
+  font-family: "Carter One", cursive;
 }
 
 body header ul li a:hover {
   color: red;
+}
+
+body header button {
+  font-family: "Carter One", cursive;
+  border: 1.5px solid red;
+  background-color: rgba(255, 255, 255, 0.6);
+  padding: 0.5em;
+  text-transform: uppercase;
+  font-weight: bold;
+  border-radius: 7px;
+  width: 150px;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+body header button:hover {
+  background-color: white;
+}
+
+body header button:hover {
+  background-color: red;
 }
 
 body .hero-image {
@@ -88,6 +120,7 @@ body .hero-image {
       -ms-flex-align: center;
           align-items: center;
   color: black;
+  text-align: center;
 }
 
 body .hero-image h1 {
@@ -98,10 +131,11 @@ body .hero-image p {
   font-size: 2em;
   padding-left: 10px;
   padding-right: 10px;
+  font-family: "Carter One", cursive;
 }
 
 body .hero-image button {
-  font-family: "Permanent Marker", cursive;
+  font-family: "Carter One", cursive;
   border: 1.5px solid red;
   background-color: rgba(255, 255, 255, 0.6);
   padding: 0.5em;
@@ -109,6 +143,15 @@ body .hero-image button {
   font-weight: bold;
   border-radius: 7px;
   width: 150px;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
   margin: 5px;
 }
 
@@ -116,8 +159,35 @@ body .hero-image button:hover {
   background-color: white;
 }
 
-body .about {
+body .info-section {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  gap: 5em;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: top;
+      -ms-flex-align: top;
+          align-items: top;
+  text-align: center;
+  padding: 2em;
+  white-space: nowrap;
+}
+
+body .info-section h2 {
   font-family: "Permanent Marker", cursive;
+  border-bottom: 2px solid red;
+  font-size: 3em;
+}
+
+body .info-section ul {
+  font-family: "Carter One", cursive;
+  font-size: 1.5em;
+}
+
+body .about {
+  font-family: "Carter One", cursive;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -127,6 +197,10 @@ body .about {
       -ms-flex-align: center;
           align-items: center;
   margin: 20px;
+}
+
+body .about h2 {
+  font-family: "Permanent Marker", cursive;
 }
 
 body .about img {
@@ -256,8 +330,8 @@ body .gallery .bottom-section .bottom-right:hover::after {
 }
 
 body .footer-container {
-  font-family: "Permanent Marker", cursive;
-  height: 25vh;
+  font-family: "Carter One", cursive;
+  height: 20vh;
   width: 100vw;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -269,6 +343,10 @@ body .footer-container {
           align-items: center;
   background-color: white;
   border-top: 2px solid red;
+}
+
+body .footer-container h2 {
+  font-family: "Permanent Marker", cursive;
 }
 
 body .footer-container .logo-container {
@@ -283,10 +361,6 @@ body .footer-container a:hover {
   color: red;
 }
 
-body .footer-container ul {
-  color: blue;
-}
-
 body .footer-container .footer-third-brands li {
   display: inline-block;
 }
@@ -294,7 +368,7 @@ body .footer-container .footer-third-brands li {
 body .rdm-bar {
   background-color: red;
   text-align: center;
-  font-family: "Permanent Marker", cursive;
+  font-family: "Carter One", cursive;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -324,6 +398,14 @@ body .rdm-bar img {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    text-align: center;
+  }
+  .about img {
+    width: 90vw !important;
+  }
+  .info-section {
+    -ms-grid-columns: (1fr)[1] !important;
+        grid-template-columns: repeat(1, 1fr) !important;
   }
 }
 /*# sourceMappingURL=style.css.map */

@@ -1,5 +1,6 @@
 /*import font*/
 @import url("https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Carter+One");
 
 /* Variables */
 $primary-color: white;
@@ -9,11 +10,11 @@ $accent-color: red; //link highlighting, borders
 $text-color: black;
 
 $header-font: "Permanent Marker", cursive;
-$secondary-font: "Permanent Marker", cursive;
+$secondary-font: "Carter One", cursive;
 
 /*mixins*/
 @mixin primaryButton {
-  font-family: $header-font;
+  font-family: $secondary-font;
   border: 1.5px solid $accent-color;
   background-color: $primary-color-more-opacity;
   padding: 0.5em;
@@ -21,13 +22,16 @@ $secondary-font: "Permanent Marker", cursive;
   font-weight: bold;
   border-radius: 7px;
   width: 150px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-evenly;
   &:hover {
     background-color: $primary-color;
   }
 }
 
 @mixin imageHover($text) {
-  font-family: $secondary-font;
+  font-family: $header-font;
   padding-top: 10px;
   padding-left: 20px;
   font-size: 2em;
@@ -71,13 +75,19 @@ body {
           color: $text-color;
           text-align: center;
           cursor: pointer;
-
+          font-family: $secondary-font;
           &:hover {
             color: $accent-color;
           }
         }
       }
     } /*end navebar link list formatting*/
+    button {
+      @include primaryButton();
+      &:hover {
+        background-color: $accent-color;
+      }
+    }
   } /*end header formatting*/
 
   /*start hero formatting*/
@@ -85,12 +95,13 @@ body {
     min-height: 70vh;
     background: url(img/hero-background.jpg) no-repeat center; //sets hero background image
     background-size: cover;
-    font-family: $secondary-font;
+    font-family: $header-font;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     color: $text-color;
+    text-align: center;
     h1 {
       font-size: 4em;
     }
@@ -98,6 +109,7 @@ body {
       font-size: 2em;
       padding-left: 10px;
       padding-right: 10px;
+      font-family: $secondary-font;
     }
     button {
       @include primaryButton();
@@ -106,6 +118,28 @@ body {
   }
   /*end hero formatting*/
 
+  /*start hours formatting*/
+  .info-section {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5em;
+    justify-content: space-around;
+    align-items: top;
+    text-align: center;
+    padding: 2em;
+    white-space: nowrap;
+    h2 {
+      font-family: $header-font;
+      border-bottom: 2px solid $accent-color;
+      font-size: 3em;
+    }
+    ul {
+      font-family: $secondary-font;
+      font-size: 1.5em;
+    }
+  }
+  /*end hours formatting*/
+
   /*start about formatting*/
   .about {
     font-family: $secondary-font;
@@ -113,6 +147,9 @@ body {
     justify-content: space-around;
     align-items: center;
     margin: 20px;
+    h2 {
+      font-family: $header-font;
+    }
     img {
       width: 40vw;
     }
@@ -190,8 +227,8 @@ body {
   tutorial: https://www.youtube.com/watch?v=KUHrMzN7ey8
   */
   .footer-container {
-    font-family: $header-font;
-    height: 25vh;
+    font-family: $secondary-font;
+    height: 20vh;
     width: 100vw;
     display: flex;
     justify-content: space-around;
@@ -199,6 +236,9 @@ body {
 
     background-color: $primary-color;
     border-top: 2px solid $accent-color;
+    h2 {
+      font-family: $header-font;
+    }
     .logo-container {
       text-align: center;
     }
@@ -208,9 +248,7 @@ body {
     a:hover {
       color: $accent-color;
     }
-    ul {
-      color: blue;
-    }
+
     .footer-third-brands li {
       display: inline-block;
     }
@@ -220,7 +258,7 @@ body {
   .rdm-bar {
     background-color: $accent-color;
     text-align: center;
-    font-family: $header-font;
+    font-family: $secondary-font;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -237,5 +275,12 @@ body {
   }
   .about {
     flex-direction: column;
+    text-align: center;
+    img {
+      width: 90vw !important;
+    }
+  }
+  .info-section {
+    grid-template-columns: repeat(1, 1fr) !important;
   }
 }
