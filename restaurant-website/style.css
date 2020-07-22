@@ -365,6 +365,20 @@ body .footer-container .footer-third-brands li {
   display: inline-block;
 }
 
+body .copyright {
+  font-family: "Carter One", cursive;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 3px;
+}
+
 body .rdm-bar {
   background-color: red;
   text-align: center;
@@ -383,6 +397,7 @@ body .rdm-bar {
 
 body .rdm-bar img {
   height: 7vh;
+  margin-top: 10px;
 }
 
 @media screen and (max-width: 600px) {

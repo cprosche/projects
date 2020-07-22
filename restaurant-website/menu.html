@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--external links-->
+    <link rel="stylesheet" href="menu-style.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/js/all.min.js"></script>
+
+    <title>Gen's Pizza</title>
+  </head>
+  <body>
+    <!--start header-->
+    <header>
+      <h2>Gen's Pizza</h2>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="#menu">Menu</a></li>
+          <li><a href="#location">Location</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <a href="tel:8157421496">
+        <button><i class="fas fa-phone fa-2x"></i> (815) 742-1496</button>
+      </a>
+    </header>
+    <!--end header-->
+
+    <!--start page body-->
+    <div class="body-container">
+      <!--start hero section-->
+      <div class="hero-image">
+        <h1>Gen's Pizza</h1>
+        <p>Delicious, handmade, woodfire oven pizza</p>
+        <button>menu</button>
+        <button>hours</button>
+      </div>
+      <!--end hero section-->
+
+      <!--start hours section-->
+      <div class="info-section">
+        <div class="hours">
+          <h2>Hours</h2>
+          <ul>
+            <li>Monday: Closed</li>
+            <li>Tuesday: Closed</li>
+            <li>Wednesday: 4pm-10pm</li>
+            <li>Thursday: 4pm-10pm</li>
+            <li>Friday: 12pm-10pm</li>
+            <li>Saturday: 12pm-12am</li>
+            <li>Sunday: 4pm-10pm</li>
+          </ul>
+        </div>
+        <div class="location">
+          <h2>Location</h2>
+          <ul>
+            <li>Gen's Pizza</li>
+            <li>123 Main Street</li>
+            <li>Puxatomy WY 12345</li>
+          </ul>
+        </div>
+      </div>
+      <!--end hours section-->
+
+      <!--start about section-->
+      <div class="about">
+        <div class="about-image">
+          <img src="img/storefront.jpg" alt="restaurant storefront" />
+        </div>
+        <div class="about-text">
+          <h2>About Us</h2>
+          <p>
+            Started in 1972, Gen opened this place because she couldn't find a
+            decent pizza place in town. With the help of her family, Gen built
+            this store, with the first this being built was the woodfire pizza
+            over. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sed
+            laboriosam voluptates laborum explicabo nostrum sit accusantium,
+            tenetur qui ea odio, ullam quos debitis. Nostrum eum dolorum a? Non,
+            repellat! Dicta. Lorem ipsum dolor sit, amet consectetur adipisicing
+            elit. Fugit nostrum, doloremque cum quisquam voluptas deleniti
+            facere, ipsam obcaecati, sequi quia placeat! Incidunt cum voluptatem
+            maiores harum repellendus vel a deserunt?
+          </p>
+        </div>
+      </div>
+      <!--end about section-->
+      <!--start gallery section-->
+      <div class="gallery">
+        <div class="top-section">
+          <div class="top-left"></div>
+
+          <div class="top-right">
+            <div class="top-above"></div>
+            <div class="top-below"></div>
+          </div>
+        </div>
+        <div class="bottom-section">
+          <div class="bottom-left">
+            <div class="bottom-above"></div>
+            <div class="bottom-below"></div>
+          </div>
+          <div class="bottom-right"></div>
+        </div>
+      </div>
+      <!--start gallery section-->
+    </div>
+    <!--end page body-->
+
+    <!--start footer-->
+    <div class="footer-container">
+      <div class="logo-container">
+        <h2>Gen's Pizza</h2>
+      </div>
+
+      <div class="footer-third">
+        <h2>Navigation</h2>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Menu</a></li>
+          <li><a href="#">Location</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-third">
+        <h2>Info</h2>
+        <ul>
+          <li><a href="tel:8157421496">Phone: (815) 742-1496</a></li>
+          <li>123 Main Street</li>
+          <li>Puxatomy WY 12345</li>
+        </ul>
+      </div>
+
+      <div class="footer-third-brands">
+        <h2>Follow Us</h2>
+        <ul>
+          <li>
+            <a href="#"><i class="fab fa-facebook-square fa-2x"></i></a>
+          </li>
+          <li>
+            <a href="#"><i class="fab fa-twitter-square fa-2x"></i></a>
+          </li>
+          <li>
+            <a href="#"><i class="fab fa-instagram-square fa-2x"></i></a>
+          </li>
+          <li>
+            <a href="#"><i class="fab fa-linkedin fa-2x"></i></a>
+          </li>
+          <li>
+            <a href="#"><i class="fab fa-snapchat-square fa-2x"></i></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="copyright">
+      <p>Copyright &copy; <span id="year"></span> Gen's Pizza</p>
+    </div>
+    <div class="rdm-bar">
+      <p>Website built by:</p>
+      <a href="https://roschedigitalmarketing.com"
+        ><img src="img/RDM Logo-03.svg" alt="RDM Logo"
+      /></a>
+    </div>
+    <!--end footer-->
+    <!--add copyright-->
+
+    <script>
+      //inserts the year into any tag with "year" id
+      var d = new Date();
+      document.getElementById("year").innerHTML = d.getFullYear();
+    </script>
+  </body>
+</html>

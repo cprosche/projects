@@ -20,8 +20,8 @@ Project: Pizza Website for Portfolio
       <h2>Gen's Pizza</h2>
       <nav>
         <ul>
-          <li><a href="#home">Home</a></li>
-          <li><a href="#menu">Menu</a></li>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="menu.html">Menu</a></li>
           <li><a href="#location">Location</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
@@ -132,8 +132,8 @@ Project: Pizza Website for Portfolio
         <h2>Info</h2>
         <ul>
           <li><a href="tel:8157421496">Phone: (815) 742-1496</a></li>
-          <li>123 Main Street</a></li>
-          <li>Puxatomy WY 12345</a></li>
+          <li>123 Main Street</li>
+          <li>Puxatomy WY 12345</li>
         </ul>
       </div>
 
@@ -158,7 +158,9 @@ Project: Pizza Website for Portfolio
         </ul>
       </div>
     </div>
-
+    <div class="copyright">
+      <p>Copyright &copy; <span id="year"></span> Gen's Pizza</p>
+    </div>
     <div class="rdm-bar">
       <p>Website built by:</p>
       <a href="https://roschedigitalmarketing.com"
@@ -166,6 +168,13 @@ Project: Pizza Website for Portfolio
       /></a>
     </div>
     <!--end footer-->
+    <!--add copyright-->
+
+    <script>
+      //inserts the year into any tag with "year" id
+      var d = new Date();
+      document.getElementById("year").innerHTML = d.getFullYear();
+    </script>
   </body>
 </html>
 
