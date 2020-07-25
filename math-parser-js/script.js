@@ -13,6 +13,36 @@ function parse(e) {
   e.preventDefault();
   let stringToParse = parseInput.value;
   //remove white space
+  stringToParse = stringToParse.replace(/\s+/g, "").trim();
+
+  //check for forbidden characters and return error
+
   //Order of operations: parenthases, exponents, Multiplcation, Division, Addition, Subtraction
-  parseOutput.innerHTML = stringToParse;
+  let parsedValue = parseSubtraction(stringToParse);
+  //output to html
+  printResult(parsedValue);
+}
+
+function parseSubtraction(string) {
+  //input "5-10-20"
+  string = string.split("-"); //['5', '10', '20']
+  string = string.map((arrayValue) => parseAddition(arrayValue)); //[5, 10, 20], converts string to number
+  string = string.reduce((accumulator, currentValue) => {
+    return accumulator - currentValue;
+  });
+  //5-10-20=-25
+  return string;
+}
+
+function parseAddition(value) {
+  value = value.split("+");
+  value = value.map((arrayValue) => +arrayValue);
+  value = value.reduce((accumulator, currentValue) => {
+    return accumulator + currentValue;
+  });
+  return value;
+}
+
+function printResult(parsed) {
+  parseOutput.innerHTML = parsed;
 }
