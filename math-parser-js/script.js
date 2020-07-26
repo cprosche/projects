@@ -1,7 +1,7 @@
 //Selectors
 const parseInput = document.getElementById("parse-input"); //gets the input box
 const parseButton = document.getElementById("parse-submit"); //gets the button
-const parseOutput = document.getElementById("parse-result"); //get the output element
+const parseOutput = document.getElementById("parse-result"); //get the output element, will output as innerHTML
 
 //event listeners
 parseButton.addEventListener("click", parse);
@@ -58,6 +58,8 @@ function parseAddition(value) {
 
   return value;
 }
+
+function parseMultiplication(value) {}
 
 function printResult(parsed) {
   parseOutput.innerHTML = parsed;
