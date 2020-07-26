@@ -11,7 +11,7 @@ parseButton.addEventListener("click", parse);
 //wont handle: / * () (yet)
 
 //Order of operations:
-// Parenthases
+// Parentheses
 // Exponents
 // Multiplcation/Division (goes left to right)
 // Addition/Subtraction (goes left to right)
@@ -51,9 +51,11 @@ function parseSubtraction(string) {
 function parseAddition(value) {
   value = value.split("+");
   value = value.map((arrayValue) => +arrayValue);
+
   value = value.reduce((accumulator, currentValue) => {
     return accumulator + currentValue;
   });
+
   return value;
 }
 
