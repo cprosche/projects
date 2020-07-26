@@ -7,8 +7,15 @@ const parseOutput = document.getElementById("parse-result"); //get the output el
 parseButton.addEventListener("click", parse);
 
 //math parsing function
-//currently built to handle:
-//wont handle: + - / * () (yet)
+//currently built to handle: + -(both subtraction and negative numbers)
+//wont handle: / * () (yet)
+
+//Order of operations:
+// Parenthases
+// Exponents
+// Multiplcation/Division (goes left to right)
+// Addition/Subtraction (goes left to right)
+
 function parse(e) {
   e.preventDefault();
   let stringToParse = parseInput.value;
@@ -17,7 +24,7 @@ function parse(e) {
 
   //check for forbidden characters and return error
 
-  //Order of operations: parenthases, exponents, Multiplcation, Division, Addition, Subtraction
+  //send to actual parser
   let parsedValue = parseSubtraction(stringToParse);
   //output to html
   printResult(parsedValue);
@@ -26,9 +33,16 @@ function parse(e) {
 function parseSubtraction(string) {
   //input "5-10-20"
   string = string.split("-"); //['5', '10', '20']
-  string = string.map((arrayValue) => parseAddition(arrayValue)); //[5, 10, 20], converts string to number
+
+  //this is needed to have the correct order of operations. Doing this like the parseAddition function leads to wrong order of operations
+  //also allows it to handle negative numbers
+  let i;
+  for (i = 1; i < string.length; i++) {
+    string[i] = "-" + string[i];
+  }
+  string = string.map((arrayValue) => parseAddition(arrayValue));
   string = string.reduce((accumulator, currentValue) => {
-    return accumulator - currentValue;
+    return accumulator + currentValue; //addition because string holds negative values AKA [5, -10, -20]
   });
   //5-10-20=-25
   return string;
