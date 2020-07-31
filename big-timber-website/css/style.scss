@@ -1,0 +1,76 @@
+//imports
+
+//variables
+$header-font: sans-serif;
+$secondary-font: serif;
+
+$watl-blue: rgba(0, 46, 131, 1);
+$watl-red: rgb(239, 4, 1);
+
+//styling section
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border: none;
+}
+
+header {
+  background-color: $watl-blue;
+  display: flex;
+  flex-direction: column;
+
+  img {
+    max-width: 150px;
+    margin: 0 auto;
+  }
+  ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    font-family: $header-font;
+    font-weight: bold;
+    a {
+      color: white;
+      text-decoration: none;
+      padding: 20px;
+      &:hover {
+        color: $watl-red;
+      }
+    }
+  }
+}
+
+.hero {
+  background-image: url("../img/group.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .text-container {
+    h2,
+    p {
+      font-family: $header-font;
+      color: white;
+      margin: 10px 0;
+    }
+    h2 {
+      font-size: 2rem;
+    }
+    p {
+      font-size: 1.5rem;
+    }
+    button {
+      color: white;
+      font-family: $header-font;
+      font-weight: bolder;
+      padding: 12px 24px;
+      background-color: $watl-red;
+      margin: 10px 0;
+    }
+  }
+}
