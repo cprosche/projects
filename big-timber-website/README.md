@@ -1,4 +1,4 @@
-# New Big Timber Axe Throwing
+# New Big Timber Axe Throwing Website
 
 ### https://bigtimberaxethrowing.com/
 
