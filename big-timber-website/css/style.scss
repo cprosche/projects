@@ -1,14 +1,4 @@
-//imports
-
-//variables
-$header-font: sans-serif;
-$secondary-font: serif;
-
-$watl-blue: rgba(0, 46, 131, 1);
-$watl-red: rgb(239, 4, 1);
-
-//styling section
-
+//remove default formatting
 * {
   margin: 0;
   padding: 0;
@@ -16,6 +6,36 @@ $watl-red: rgb(239, 4, 1);
   border: none;
   overflow-x: hidden;
 }
+
+//imports
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&family=Patua+One&display=swap");
+
+//variables
+$header-font: "Oswald", sans-serif;
+$secondary-font: "Oswald", sans-serif;
+
+$watl-blue: rgba(0, 46, 131, 1);
+$watl-red: rgb(239, 4, 1);
+
+//mixins
+@mixin buttonStyle {
+  a {
+    margin: 20px 20px 20px 0;
+    overflow-x: visible !important;
+  }
+  button {
+    color: white;
+    font-family: $header-font;
+    font-weight: bolder;
+    padding: 12px 24px;
+    background-color: $watl-red;
+
+    box-shadow: 5px 5px 17px -6px rgba(0, 0, 0, 0.75);
+    overflow-x: visible !important;
+  }
+}
+
+//styling section
 
 header {
   background-color: $watl-blue;
@@ -41,6 +61,13 @@ header {
       }
     }
   }
+  .promo {
+    background-color: $watl-red;
+    padding: 10px;
+    text-align: center;
+    color: white;
+    font-family: $header-font;
+  }
 }
 
 .hero {
@@ -53,6 +80,8 @@ header {
   grid-template-columns: 1fr;
 
   align-items: center;
+
+  clip-path: polygon(0% 0%, 100% 0, 100% 85%, 50% 100%, 0 85%);
 
   .overlay {
     width: 100%;
@@ -82,14 +111,8 @@ header {
     p {
       font-size: 1.5rem;
     }
-    button {
-      color: white;
-      font-family: $header-font;
-      font-weight: bolder;
-      padding: 12px 24px;
-      background-color: $watl-red;
-      margin: 10px 0;
-    }
+
+    @include buttonStyle();
   }
 }
 
@@ -99,6 +122,7 @@ header {
   background-color: $watl-red;
   margin: 24px 48px;
   padding: 15px 30px;
+  border-radius: 5px;
 }
 
 .info {
@@ -107,15 +131,101 @@ header {
   justify-items: center;
   margin: 40px;
   .info-section {
+    border-radius: 5px;
+
     padding: 15px;
     background-color: rgba(0, 0, 0, 0.1);
     h3 {
       margin-bottom: 3px;
       font-family: $header-font;
+      font-size: 1.75em;
     }
     ul {
       list-style: none;
       font-family: $secondary-font;
+      font-size: 1.25em;
+    }
+  }
+}
+
+.watl-section {
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  margin: 10px;
+  .watl-description {
+    margin: 20px;
+    font-family: $secondary-font;
+    font-size: 1.5rem;
+    text-align: center;
+  }
+  img {
+    width: 50%;
+  }
+
+  @include buttonStyle();
+}
+
+.faq {
+  margin: 10px 0;
+  .faq-top {
+    color: white;
+    text-align: center;
+    background-color: $watl-red;
+    padding: 20px;
+    h2 {
+      font-family: $header-font;
+    }
+  }
+  .faq-body {
+    display: grid;
+
+    .faq-background {
+      grid-column: 1/-1;
+      grid-row: 1/-1;
+
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+
+      .left-image {
+        background-image: url("../img/axe.jpg");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+
+        width: 100%;
+
+        filter: brightness(30%);
+      }
+      .right-image {
+        background-color: $watl-blue;
+        width: 100%;
+      }
+    }
+
+    .question-section {
+      grid-column: 1/-1;
+      grid-row: 1/-1;
+
+      z-index: 1;
+
+      h3 {
+        font-family: $header-font;
+      }
+      p {
+        font-family: $secondary-font;
+      }
+      .question {
+        color: white;
+
+        padding: 15px;
+        margin: 10px;
+        background-color: rgba(255, 255, 255, 0.1);
+
+        border-radius: 5px;
+
+        text-align: center;
+      }
     }
   }
 }
@@ -142,6 +252,7 @@ footer {
   }
   .logo {
     width: 85%;
+    max-width: 200px;
   }
 }
 

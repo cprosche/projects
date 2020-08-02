@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&family=Patua+One&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -31,7 +32,7 @@ header ul {
       -ms-flex-pack: center;
           justify-content: center;
   list-style: none;
-  font-family: sans-serif;
+  font-family: "Oswald", sans-serif;
   font-weight: bold;
 }
 
@@ -43,6 +44,14 @@ header ul a {
 
 header ul a:hover {
   color: #ef0401;
+}
+
+header .promo {
+  background-color: #ef0401;
+  padding: 10px;
+  text-align: center;
+  color: white;
+  font-family: "Oswald", sans-serif;
 }
 
 .hero {
@@ -58,6 +67,8 @@ header ul a:hover {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-clip-path: polygon(0% 0%, 100% 0, 100% 85%, 50% 100%, 0 85%);
+          clip-path: polygon(0% 0%, 100% 0, 100% 85%, 50% 100%, 0 85%);
 }
 
 .hero .overlay {
@@ -80,7 +91,7 @@ header ul a:hover {
 
 .hero .text-container h2,
 .hero .text-container p {
-  font-family: sans-serif;
+  font-family: "Oswald", sans-serif;
   color: white;
   margin: 10px 0;
 }
@@ -93,21 +104,29 @@ header ul a:hover {
   font-size: 1.5rem;
 }
 
+.hero .text-container a {
+  margin: 20px 20px 20px 0;
+  overflow-x: visible !important;
+}
+
 .hero .text-container button {
   color: white;
-  font-family: sans-serif;
+  font-family: "Oswald", sans-serif;
   font-weight: bolder;
   padding: 12px 24px;
   background-color: #ef0401;
-  margin: 10px 0;
+  -webkit-box-shadow: 5px 5px 17px -6px rgba(0, 0, 0, 0.75);
+          box-shadow: 5px 5px 17px -6px rgba(0, 0, 0, 0.75);
+  overflow-x: visible !important;
 }
 
 .covid-policy {
-  font-family: sans-serif;
+  font-family: "Oswald", sans-serif;
   text-align: center;
   background-color: #ef0401;
   margin: 24px 48px;
   padding: 15px 30px;
+  border-radius: 5px;
 }
 
 .info {
@@ -120,24 +139,131 @@ header ul a:hover {
 }
 
 .info .info-section {
+  border-radius: 5px;
   padding: 15px;
   background-color: rgba(0, 0, 0, 0.1);
 }
 
 .info .info-section h3 {
   margin-bottom: 3px;
-  font-family: sans-serif;
+  font-family: "Oswald", sans-serif;
+  font-size: 1.75em;
 }
 
 .info .info-section ul {
   list-style: none;
-  font-family: serif;
+  font-family: "Oswald", sans-serif;
+  font-size: 1.25em;
+}
+
+.watl-section {
+  display: -ms-grid;
+  display: grid;
+  justify-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 10px;
+}
+
+.watl-section .watl-description {
+  margin: 20px;
+  font-family: "Oswald", sans-serif;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.watl-section img {
+  width: 50%;
+}
+
+.watl-section a {
+  margin: 20px 20px 20px 0;
+  overflow-x: visible !important;
+}
+
+.watl-section button {
+  color: white;
+  font-family: "Oswald", sans-serif;
+  font-weight: bolder;
+  padding: 12px 24px;
+  background-color: #ef0401;
+  -webkit-box-shadow: 5px 5px 17px -6px rgba(0, 0, 0, 0.75);
+          box-shadow: 5px 5px 17px -6px rgba(0, 0, 0, 0.75);
+  overflow-x: visible !important;
+}
+
+.faq {
+  margin: 10px 0;
+}
+
+.faq .faq-top {
+  color: white;
+  text-align: center;
+  background-color: #ef0401;
+  padding: 20px;
+}
+
+.faq .faq-top h2 {
+  font-family: "Oswald", sans-serif;
+}
+
+.faq .faq-body {
+  display: -ms-grid;
+  display: grid;
+}
+
+.faq .faq-body .faq-background {
+  grid-column: 1/-1;
+  grid-row: 1/-1;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 2fr;
+      grid-template-columns: 1fr 2fr;
+}
+
+.faq .faq-body .faq-background .left-image {
+  background-image: url("../img/axe.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  -webkit-filter: brightness(30%);
+          filter: brightness(30%);
+}
+
+.faq .faq-body .faq-background .right-image {
+  background-color: #002e83;
+  width: 100%;
+}
+
+.faq .faq-body .question-section {
+  grid-column: 1/-1;
+  grid-row: 1/-1;
+  z-index: 1;
+}
+
+.faq .faq-body .question-section h3 {
+  font-family: "Oswald", sans-serif;
+}
+
+.faq .faq-body .question-section p {
+  font-family: "Oswald", sans-serif;
+}
+
+.faq .faq-body .question-section .question {
+  color: white;
+  padding: 15px;
+  margin: 10px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 5px;
+  text-align: center;
 }
 
 footer {
   background-color: #002e83;
   color: white;
-  font-family: sans-serif;
+  font-family: "Oswald", sans-serif;
   padding: 30px 10px;
   display: -ms-grid;
   display: grid;
@@ -160,10 +286,11 @@ footer a:hover {
 
 footer .logo {
   width: 85%;
+  max-width: 200px;
 }
 
 .copyright {
-  font-family: sans-serif;
+  font-family: "Oswald", sans-serif;
   background-color: #002e83;
   color: white;
   text-align: center;

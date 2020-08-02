@@ -10,6 +10,7 @@ Date: 7/31/20
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/js/all.min.js"></script>
     <link rel="stylesheet" href="css/style.css" />
 
     <title>Big Timber Axe Throwing</title>
@@ -35,6 +36,12 @@ Date: 7/31/20
           <a href="#"><li>CONTACT</li></a>
         </ul>
       </nav>
+      <div class="promo">
+        <h2>
+          Book a group of 6 people for before 6PM and get the whole facility to
+          yourselves! Must call to book.
+        </h2>
+      </div>
     </header>
     <!--end header-->
 
@@ -87,11 +94,55 @@ Date: 7/31/20
       </div>
     </div>
 
-    <div class="faq"></div>
+    <div class="trailer"></div>
 
-    <div class="end-image"></div>
+    <div class="watl-section">
+      <img src="img/WATL_Watermark.png" alt="WATL Logo" />
+      <div class="watl-description">
+        <p>
+          We’re proud members of the World Axe Throwing League. Click here to
+          see what it’s all about!
+        </p>
+      </div>
+      <a href="https://worldaxethrowingleague.com/">
+        <button>LEARN MORE</button>
+      </a>
+    </div>
 
-    <div class="watl-section"></div>
+    <div class="faq">
+      <div class="faq-top">
+        <h2>Frequently Asked Questions</h2>
+      </div>
+      <div class="faq-body">
+        <div class="faq-background">
+          <div class="left-image"></div>
+          <div class="right-image"></div>
+        </div>
+        <div class="question-section">
+          <div class="question">
+            <h3>What’s the minimum age?</h3>
+            <p>
+              The minimum age for throwing is 13 years old, however we allow as
+              young as 10 to come as spectators only!
+            </p>
+          </div>
+          <div class="question">
+            <h3>How do I book?</h3>
+            <p>
+              You can book online here or by messaging or calling us directly at
+              815-262-3399
+            </p>
+          </div>
+          <div class="question">
+            <h3>What should I wear?</h3>
+            <p>
+              Close toe shoes are required. We recommend loose fit clothing so
+              you’re comfortable throwing.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <!--This should be a seperate .html file as well-->
     <footer>
@@ -134,8 +185,13 @@ Date: 7/31/20
       </div>
     </footer>
     <div class="copyright">
-      <p>&copy; Big Timber Axe Throwing</p>
+      <p><span id="year"></span> &copy; Big Timber Axe Throwing</p>
     </div>
+    <script>
+      //inserts the year into any tag with "year" id
+      var d = new Date();
+      document.getElementById("year").innerHTML = d.getFullYear();
+    </script>
     <!--end footer-->
   </body>
 </html>
