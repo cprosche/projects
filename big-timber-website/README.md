@@ -9,7 +9,9 @@ Built by Cade Rosche
 - [ ] Sticky Header
 - [ ] Click to open FAQ
 - [ ] Add side buttons for email, phone, and socials
+- [ ] Make Responsive
 - [ ] Get Big Timber Approval
+- [ ] Make seperate header & footer HTML and CSS
 - [ ] Make Trailer Page
 - [ ] Make Pricing Page
 - [ ] Make Gift Cards Page
